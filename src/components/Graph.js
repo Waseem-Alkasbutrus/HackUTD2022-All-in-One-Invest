@@ -24,6 +24,8 @@ function convertEpochToSpecificTimezone(timeEpoch, offset){
 function dataGenerator(company) {
     let companyData = []
     
+    console.log(company)
+
     //key for each price
     for (let i = 1556582400000; i <= 1668124800000; i = i + 86400000) {
       let dailyCompanyData = {

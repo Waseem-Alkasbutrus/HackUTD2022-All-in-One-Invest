@@ -9,7 +9,7 @@ import APPL from'./json/APPL.json'
 import AMZN from './json/AMZN.json'
 import FXAIX from './json/FXAIX.json'
 import GOOGL from './json/GOOGL.json'
-import INTC from './json/INTC.json'
+import INTL from './json/INTC.json'
 import JEPI from './json/JEPI.json'
 import JNJ from './json/JNJ.json'
 import JPST from './json/JPST.json'
@@ -22,7 +22,7 @@ import SPY from './json/SPY.json'
 import TSLA from './json/TSLA.json'
 import V from './json/V.json'
 import VOO from './json/VOO.json'
-import VFAIX from './json/VFIAX.json'
+import VFIAX from './json/VFIAX.json'
 import VSMPX from './json/VSMPX.json'
 
 import BTC from './json/BTC-USD.json'
@@ -75,26 +75,25 @@ function App() {
 
       <div className={tabIndex === 2? '.content-div': 'hidden-content-div'}>
         <CardList>
-          <ItemCard ticker={Stocks[0].ticker} name={Stocks[0].name} price={Stocks[0].price} change={Stocks[0].change}/>
-          <ItemCard ticker={Stocks[1].ticker} name={Stocks[1].name} price={Stocks[1].price} change={Stocks[1].change}/>
-          <ItemCard ticker={Stocks[2].ticker} name={Stocks[2].name} price={Stocks[2].price} change={Stocks[2].change}/>
-          <ItemCard ticker={Stocks[3].ticker} name={Stocks[3].name} price={Stocks[3].price} change={Stocks[3].change}/>
-          <ItemCard ticker={Stocks[4].ticker} name={Stocks[4].name} price={Stocks[4].price} change={Stocks[4].change}/>
-          <ItemCard ticker={Stocks[5].ticker} name={Stocks[5].name} price={Stocks[5].price} change={Stocks[5].change}/>
-          <ItemCard ticker={Stocks[6].ticker} name={Stocks[6].name} price={Stocks[6].price} change={Stocks[6].change}/>
-          <ItemCard ticker={Stocks[7].ticker} name={Stocks[7].name} price={Stocks[7].price} change={Stocks[7].change}/>
-          <ItemCard ticker={Stocks[8].ticker} name={Stocks[8].name} price={Stocks[8].price} change={Stocks[8].change}/>
-          <ItemCard ticker={Stocks[9].ticker} name={Stocks[9].name} price={Stocks[9].price} change={Stocks[9].change}/>
-          <ItemCard ticker={Stocks[10].ticker} name={Stocks[10].name} price={Stocks[10].price} change={Stocks[10].change}/>
-          <ItemCard ticker={Stocks[11].ticker} name={Stocks[11].name} price={Stocks[11].price} change={Stocks[11].change}/>
-          <ItemCard ticker={Stocks[12].ticker} name={Stocks[12].name} price={Stocks[12].price} change={Stocks[12].change}/>
-          <ItemCard ticker={Stocks[13].ticker} name={Stocks[13].name} price={Stocks[13].price} change={Stocks[13].change}/>
-          <ItemCard ticker={Stocks[14].ticker} name={Stocks[14].name} price={Stocks[14].price} change={Stocks[14].change}/>
-          <ItemCard ticker={Stocks[15].ticker} name={Stocks[15].name} price={Stocks[15].price} change={Stocks[15].change}/>
-          <ItemCard ticker={Stocks[16].ticker} name={Stocks[16].name} price={Stocks[16].price} change={Stocks[16].change}/>
-          <ItemCard ticker={Stocks[17].ticker} name={Stocks[17].name} price={Stocks[17].price} change={Stocks[17].change}/>
-          <ItemCard ticker={Stocks[18].ticker} name={Stocks[18].name} price={Stocks[18].price} change={Stocks[18].change}/>
-          <ItemCard ticker={Stocks[19].ticker} name={Stocks[19].name} price={Stocks[19].price} change={Stocks[19].change}/>
+          <ItemCard file={APPL} ticker={Stocks[0].ticker} name={Stocks[0].name} price={Stocks[0].price} change={Stocks[0].change}/>
+          <ItemCard file={AMZN} ticker={Stocks[1].ticker} name={Stocks[1].name} price={Stocks[1].price} change={Stocks[1].change}/>
+          <ItemCard file={FXAIX} ticker={Stocks[2].ticker} name={Stocks[2].name} price={Stocks[2].price} change={Stocks[2].change}/>
+          <ItemCard file={GOOGL} ticker={Stocks[3].ticker} name={Stocks[3].name} price={Stocks[3].price} change={Stocks[3].change}/>
+          <ItemCard file={INTL} ticker={Stocks[4].ticker} name={Stocks[4].name} price={Stocks[4].price} change={Stocks[4].change}/>
+          <ItemCard file={JEPI} ticker={Stocks[5].ticker} name={Stocks[5].name} price={Stocks[5].price} change={Stocks[5].change}/>
+          <ItemCard file={JNJ} ticker={Stocks[6].ticker} name={Stocks[6].name} price={Stocks[6].price} change={Stocks[6].change}/>
+          <ItemCard file={JPST} ticker={Stocks[7].ticker} name={Stocks[7].name} price={Stocks[7].price} change={Stocks[7].change}/>
+          <ItemCard file={MA} ticker={Stocks[8].ticker} name={Stocks[8].name} price={Stocks[8].price} change={Stocks[8].change}/>
+          <ItemCard file={META} ticker={Stocks[9].ticker} name={Stocks[9].name} price={Stocks[9].price} change={Stocks[9].change}/>
+          <ItemCard file={MSFT} ticker={Stocks[10].ticker} name={Stocks[10].name} price={Stocks[10].price} change={Stocks[10].change}/>
+          <ItemCard file={NVDA} ticker={Stocks[11].ticker} name={Stocks[11].name} price={Stocks[11].price} change={Stocks[11].change}/>
+          <ItemCard file={QQQ} ticker={Stocks[12].ticker} name={Stocks[12].name} price={Stocks[12].price} change={Stocks[12].change}/>
+          <ItemCard file={SPY} ticker={Stocks[13].ticker} name={Stocks[13].name} price={Stocks[13].price} change={Stocks[13].change}/>
+          <ItemCard file={TSLA} ticker={Stocks[14].ticker} name={Stocks[14].name} price={Stocks[14].price} change={Stocks[14].change}/>
+          <ItemCard file={V} ticker={Stocks[15].ticker} name={Stocks[15].name} price={Stocks[15].price} change={Stocks[15].change}/>
+          <ItemCard file={VFIAX} ticker={Stocks[16].ticker} name={Stocks[16].name} price={Stocks[16].price} change={Stocks[16].change}/>
+          <ItemCard file={VOO} ticker={Stocks[17].ticker} name={Stocks[17].name} price={Stocks[17].price} change={Stocks[17].change}/>
+          <ItemCard file={VSMPX} ticker={Stocks[18].ticker} name={Stocks[18].name} price={Stocks[18].price} change={Stocks[18].change}/>
         </CardList>
       </div>
     </div>

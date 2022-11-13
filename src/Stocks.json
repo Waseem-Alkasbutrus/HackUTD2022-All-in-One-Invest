@@ -107,12 +107,6 @@
     "change": 0.96
 },
 {
-    "ticker": "APPL",
-    "name": "Apple Inc",
-    "price": 149.70,
-    "change": 1.93
-},
-{
     "ticker": "VSMPX",
     "name": "Vanguard Total Stock Market Index",
     "price": 149.70,
