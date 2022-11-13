@@ -15,7 +15,7 @@ function App() {
 
   return (
     <div className='app-div'>
-      <div className="container">
+      <div className="menu-div">
           <Item clickFunc={() => setTabIndex(1)} active={tabIndex === 1? "tab active-tab": "tab"} icon={LearnIcon} label="Education" />
           <SubItem label="Technical" />
           <SubItem label="Fundamental" />

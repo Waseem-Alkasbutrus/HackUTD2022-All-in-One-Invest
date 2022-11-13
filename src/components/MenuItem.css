@@ -6,12 +6,19 @@
     align-items: center;
     gap: 0.5rem;
     
-    width: fit-content;
+    width: auto;
     padding: 0.5rem;
 }
 
 .active-tab {
-    background-color: aqua;
+    background-color: #479ed8;
+    color: white;
+
+    border-radius: 1rem;
+}
+
+.active-tab > img {
+    filter: invert(100%);
 }
 
 .item-icon {
