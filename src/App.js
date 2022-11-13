@@ -49,7 +49,7 @@ function App() {
       <div className="menu-div">
           <Item clickFunc={() => setTabIndex(1)} active={tabIndex === 1? "tab active-tab": "tab"} icon={LearnIcon} label="Education" />
           <Item clickFunc={() => setTabIndex(2)} active={tabIndex === 2? "tab active-tab": "tab"} icon={StocksIcon} label="Stocks" />
-          <Item clickFunc={() => setTabIndex(4)} active={tabIndex === 4? "tab active-tab": "tab"} icon={SuggestionsIcon} label="Get Suggestions" />
+          <Item clickFunc={() => setTabIndex(3)} active={tabIndex === 3? "tab active-tab": "tab"} icon={SuggestionsIcon} label="Get Suggestions" />
       </div>
 
       <div className={tabIndex === 1? '.content-div': 'hidden-content-div'}>
@@ -95,6 +95,16 @@ function App() {
           <ItemCard file={VOO} ticker={Stocks[17].ticker} name={Stocks[17].name} price={Stocks[17].price} change={Stocks[17].change}/>
           <ItemCard file={VSMPX} ticker={Stocks[18].ticker} name={Stocks[18].name} price={Stocks[18].price} change={Stocks[18].change}/>
         </CardList>
+      </div>
+
+      <div className={tabIndex === 3? '.content-div': 'hidden-content-div'}>
+        <p>There are 3 main categories to divide people based on the survey results.</p>
+        <p>Low Risk/Low Reward/Low Research: Passive ETFS, Tech Stock (Large Market Cap)</p>
+        <p>VOO, QQQ, APPL, MSFT</p>
+        <p>High Risk/High Reward/High Research: Semiconductor, Internet Retail, Drug Manufacturing, Banks</p>
+        <p>NVDA, INTC, AMZN, JNJ, PFE, V, BAC</p>
+        <p>High Risk/High Reward/Low Research: Active ETFS, Mutual Funds</p>
+        <p>VSMPX, VFIAX, FXAIX, JPST, JEPI</p>
       </div>
     </div>
   );
