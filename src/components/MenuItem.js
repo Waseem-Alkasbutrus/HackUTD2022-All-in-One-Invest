@@ -3,7 +3,7 @@ import "./MenuItem.css"
 
 export function Item(props) {
     return (
-        <div className="item-container">
+        <div className={props.className}>
             <img className="item-icon" src={props.icon} />
             <h1 className="item-label">{props.label}</h1>
         </div>

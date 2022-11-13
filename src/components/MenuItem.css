@@ -1,4 +1,4 @@
-.item-container {
+.tab {
     display: flex;
     flex-direction: row;
     flex-wrap: nowrap;
@@ -8,6 +8,10 @@
     
     width: fit-content;
     padding: 0.5rem;
+}
+
+.active-tab {
+    background-color: aqua;
 }
 
 .item-icon {
