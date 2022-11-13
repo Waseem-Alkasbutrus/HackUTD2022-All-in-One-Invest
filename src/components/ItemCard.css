@@ -1,0 +1,30 @@
+.card-div {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+
+    justify-content: space-between;
+    align-items: baseline;
+
+    border: 1px solid rgba(0,0,0,0.2);
+    border-radius: 1rem;
+
+    padding: 0.2rem 1rem;
+}
+
+.ticker {
+    font-size: 14px;
+}
+
+.change {
+
+}
+
+.positive {
+    color: green;
+}
+
+
+.negative {
+    color: red;
+}

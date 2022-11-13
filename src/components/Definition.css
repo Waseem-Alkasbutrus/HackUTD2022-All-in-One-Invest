@@ -5,9 +5,9 @@
     align-items: center;
 
     padding: 2rem 1rem;
-    max-width: 16rem;
-    min-width: 12rem;
-
+    height: fit-content;
+    width: 16rem;   
+        
     border: 1px solid rgba(0,0,0,0.2);
     border-radius: 16px;
 }
