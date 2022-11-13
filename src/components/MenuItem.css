@@ -1,10 +1,40 @@
 .item-container {
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     
-    padding: 0.2rem
+    align-items: center;
+    gap: 0.5rem;
+    
+    width: fit-content;
+    padding: 0.5rem;
 }
 
 .item-icon {
-    display: inline;
+    height: 32px;
+    width: 32px;
+}
+
+.item-label {
+    font-size: 24px;
+    font-weight: 400;
+
+    margin: 0rem;
+}
+
+.sub-item-label {
+    display: flex;
+    flex-direction: row;
+
+    align-items: center;
+    gap: 0.5rem;
+    
+    padding: 0.5rem 4rem;
+}
+
+.sub-item-label {
+    font-size: 20px;
+    font-weight: 350;
+
+    margin: 0rem;
 }
