@@ -1,13 +1,22 @@
 .app-div {
   display: flex;
   flex-direction: row;
+
+  padding: 0.5rem;
 }
 
 .menu-div {
   display: flex;
   flex-direction: column;
 
+  border: 1px solid rgba(0,0,0,0.2);
+  border-radius: 16px;
+
   width: fit-content;
+}
+
+.content-div {
+  /* TODO: */
 }
 
 @media (prefers-reduced-motion: no-preference) {

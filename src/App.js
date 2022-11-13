@@ -4,6 +4,7 @@ import './App.css';
 import Definition from './components/Definition';
 import GridContainer from './components/GridContainer';
 import {Item, SubItem} from './components/MenuItem'
+import Search from './components/Search';
 
 import LearnIcon from './assets/icons/Learn.svg'
 import StocksIcon from './assets/icons/Stocks.svg'
@@ -22,16 +23,18 @@ function App() {
         <Item icon={CryptoIcon} label="Crypto" />
         <Item icon={SuggestionsIcon} label="Get Suggestions" />
       </div>
-      <GridContainer>
-        <Definition term="Ur Mom" definition="Your mom is very very large its hard to even fit her in this card lmfao" />
-        <Definition term="Raj" definition="Raj is the fucking g bro" />
-        <Definition term="Raj" definition="Raj is the fucking g bro" />
-        <Definition term="Raj" definition="Raj is the fucking g bro" />
-        <Definition term="Ur Mom" definition="Your mom is very very large its hard to even fit her in this card lmfao" />
-        <Definition term="Raj" definition="Raj is the fucking g bro" />
-        <Definition term="Ur Mom" definition="Your mom is very very large its hard to even fit her in this card lmfao" />
-        <Definition term="Ur Mom" definition="Your mom is very very large its hard to even fit her in this card lmfao" />
-      </GridContainer>
+      <div className='content-div'>
+        <GridContainer>
+          <Definition term="Ur Mom" definition="Your mom is very very large its hard to even fit her in this card lmfao" />
+          <Definition term="Raj" definition="Raj is the fucking g bro" />
+          <Definition term="Raj" definition="Raj is the fucking g bro" />
+          <Definition term="Raj" definition="Raj is the fucking g bro" />
+          <Definition term="Ur Mom" definition="Your mom is very very large its hard to even fit her in this card lmfao" />
+          <Definition term="Raj" definition="Raj is the fucking g bro" />
+          <Definition term="Ur Mom" definition="Your mom is very very large its hard to even fit her in this card lmfao" />
+          <Definition term="Ur Mom" definition="Your mom is very very large its hard to even fit her in this card lmfao" />
+        </GridContainer>
+      </div>
     </div>
   );
 }
