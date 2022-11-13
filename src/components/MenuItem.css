@@ -17,7 +17,7 @@
     border-radius: 1rem;
 }
 
-.active-tab > img {
+img {
     filter: invert(100%);
 }
 
