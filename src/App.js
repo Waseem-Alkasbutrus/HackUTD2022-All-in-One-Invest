@@ -21,30 +21,54 @@ function App() {
     <div className='app-div'>
       <div className="menu-div">
           <Item clickFunc={() => setTabIndex(1)} active={tabIndex === 1? "tab active-tab": "tab"} icon={LearnIcon} label="Education" />
-          <SubItem label="Technical" />
-          <SubItem label="Fundamental" />
           <Item clickFunc={() => setTabIndex(2)} active={tabIndex === 2? "tab active-tab": "tab"} icon={StocksIcon} label="Stocks" />
-          <Item clickFunc={() => setTabIndex(3)} active={tabIndex === 3? "tab active-tab": "tab"} icon={CryptoIcon} label="Crypto" />
           <Item clickFunc={() => setTabIndex(4)} active={tabIndex === 4? "tab active-tab": "tab"} icon={SuggestionsIcon} label="Get Suggestions" />
       </div>
 
       <div className={tabIndex === 1? '.content-div': 'hidden-content-div'}>
         <GridContainer>
-          <Definition term="Ur Mom" definition="Your mom is very very large its hard to even fit her in this card lmfao" />
-          <Definition term="Raj" definition="Raj is the fucking g bro" />
-          <Definition term="Raj" definition="Raj is the fucking g bro" />
-          <Definition term="Raj" definition="Raj is the fucking g bro" />
-          <Definition term="Ur Mom" definition="Your mom is very very large its hard to even fit her in this card lmfao" />
-          <Definition term="Raj" definition="Raj is the fucking g bro" />
-          <Definition term="Ur Mom" definition="Your mom is very very large its hard to even fit her in this card lmfao" />
-          <Definition term="Intrinsic Value" definition="One of the primary assumptions behind fundamental analysis is that a stock's current price often does not fully reflect the value of the company when compared to publicly available financial data. A second assumption is that the value reflected from the company's fundamental data is more likely to be closer to the true value of the stock." />
+          <Definition term="Open" definition="The opening price is the price at which a security first trades upon the opening of an exchange on a trading day." />
+          <Definition term="Close" definition="The closing price is the raw price or cash value of the last transacted price in a security before the market officially closes for normal trading." />
+          <Definition term="High" definition="The highest intraday price of a stock in the most recent (or current) trading session." />
+          <Definition term="Low" definition="The lowest intraday price of a stock in the most recent (or current) trading session." />
+          <Definition term="Volume" definition="Volume is simply the number of shares traded in a particular stock, index, or other investment over a specific period of time." />
+          <Definition term="P/E" definition="The price-to-earnings ratio is the ratio for valuing a company that measures its current share price relative to its earnings per share (EPS). A high P/E ratio could mean that a company's stock is overvalued, or that investors are expecting high growth rates in the future. A P/E ratio holds the most value to an analyst when compared against similar companies in the same industry or for a single company across a period of time." />
+          <Definition term="Market Cap" definition="Market capitalization refers to the total dollar market value of a company's outstanding shares of stock. To calculate a company's market cap, multiply the number of outstanding shares by the current market value of one share. Market cap is often used to determine a company's size, then evaluate the company's financial performance to other companies of various sizes." />
+          <Definition term="52 Week High" definition="The 52-week high is the highest price at which a security, such as a stock, has traded during the time period that equates to one year." />
+          <Definition term="52 Week Low" definition="The 52-week low is the lowest price at which a security, such as a stock, has traded during the time period that equates to one year." />
+          <Definition term="Average Volume" definition="Average daily trading volume (ADTV) is the average number of shares traded within a day in a given stock. Sizable volume increases signify something is changing in the stock that is attracting more interest. This could be bearish or bullish depending on which way the price is heading. Decreasing volume shows interest is waning, but even declining volume is useful because when higher volume returns there is often a strong price push as well." />
+          <Definition term="Yield" definition="Yield refers to the earnings generated and realized on an investment over a particular period of time. It's expressed as a percentage based on the invested amount, current market value, or face value of the security. Higher yields are perceived to be an indicator of lower risk and higher income, but a high yield may not always be a positive, such as the case of a rising dividend yield due to a falling stock price." />
+          <Definition term="Beta" definition="Beta (β) is a measure of the volatility—or systematic risk—of a security or portfolio compared to the market as a whole (usually the S&P 500). Stocks with betas higher than 1.0 can be interpreted as more volatile than the S&P 500. Beta data about an individual stock can only provide an investor with an approximation of how much risk the stock will add to a (presumably) diversified portfolio." />
+          <Definition term="EPS" definition="Earnings per share (EPS) is calculated as a company's profit divided by the outstanding shares of its common stock. The resulting number serves as an indicator of a company's profitability. A higher EPS indicates greater value because investors will pay more for a company's shares if they think the company has higher profits relative to its share price." />
+          <Definition term="Simple Moving Average (SMA)" definition="Simple moving averages calculate the average of a range of prices by the number of periods within that range. It is a technical indicator that can aid in determining if an asset price will continue or if it will reverse a bull or bear trend." />
+          <Definition term="Exponential Moving Average (EMA)" definition="Exponential moving averages (EMAs) are designed to see price trends over specific time frames, such as 50 or 100 days. Compared to simple moving averages, EMAs give greater weight to recent (more relevant) data." />
+          <Definition term="Bollinger Bands" definition="Bollinger BandsÂ® are a technical analysis tool developed by John Bollinger for generating oversold or overbought signals. The upper and lower bands are typically 2 standard deviations +/- from a 20-day simple moving average (which is the center line), but they can be modified. When the price continually touches the upper Bollinger Band, it can indicate an overbought signal while continually touching the lower band indicates an oversold signal." />
         </GridContainer>
       </div>
 
       <div className={tabIndex === 2? '.content-div': 'hidden-content-div'}>
-        {/* <CardList>
+        <CardList>
           <ItemCard ticker={Stocks[0].ticker} name={Stocks[0].name} price={Stocks[0].price} change={Stocks[0].change}/>
-        </CardList> */}
+          <ItemCard ticker={Stocks[1].ticker} name={Stocks[1].name} price={Stocks[1].price} change={Stocks[1].change}/>
+          <ItemCard ticker={Stocks[2].ticker} name={Stocks[2].name} price={Stocks[2].price} change={Stocks[2].change}/>
+          <ItemCard ticker={Stocks[3].ticker} name={Stocks[3].name} price={Stocks[3].price} change={Stocks[3].change}/>
+          <ItemCard ticker={Stocks[4].ticker} name={Stocks[4].name} price={Stocks[4].price} change={Stocks[4].change}/>
+          <ItemCard ticker={Stocks[5].ticker} name={Stocks[5].name} price={Stocks[5].price} change={Stocks[5].change}/>
+          <ItemCard ticker={Stocks[6].ticker} name={Stocks[6].name} price={Stocks[6].price} change={Stocks[6].change}/>
+          <ItemCard ticker={Stocks[7].ticker} name={Stocks[7].name} price={Stocks[7].price} change={Stocks[7].change}/>
+          <ItemCard ticker={Stocks[8].ticker} name={Stocks[8].name} price={Stocks[8].price} change={Stocks[8].change}/>
+          <ItemCard ticker={Stocks[9].ticker} name={Stocks[9].name} price={Stocks[9].price} change={Stocks[9].change}/>
+          <ItemCard ticker={Stocks[10].ticker} name={Stocks[10].name} price={Stocks[10].price} change={Stocks[10].change}/>
+          <ItemCard ticker={Stocks[11].ticker} name={Stocks[11].name} price={Stocks[11].price} change={Stocks[11].change}/>
+          <ItemCard ticker={Stocks[12].ticker} name={Stocks[12].name} price={Stocks[12].price} change={Stocks[12].change}/>
+          <ItemCard ticker={Stocks[13].ticker} name={Stocks[13].name} price={Stocks[13].price} change={Stocks[13].change}/>
+          <ItemCard ticker={Stocks[14].ticker} name={Stocks[14].name} price={Stocks[14].price} change={Stocks[14].change}/>
+          <ItemCard ticker={Stocks[15].ticker} name={Stocks[15].name} price={Stocks[15].price} change={Stocks[15].change}/>
+          <ItemCard ticker={Stocks[16].ticker} name={Stocks[16].name} price={Stocks[16].price} change={Stocks[16].change}/>
+          <ItemCard ticker={Stocks[17].ticker} name={Stocks[17].name} price={Stocks[17].price} change={Stocks[17].change}/>
+          <ItemCard ticker={Stocks[18].ticker} name={Stocks[18].name} price={Stocks[18].price} change={Stocks[18].change}/>
+          <ItemCard ticker={Stocks[19].ticker} name={Stocks[19].name} price={Stocks[19].price} change={Stocks[19].change}/>
+        </CardList>
       </div>
     </div>
   );
