@@ -1,0 +1,26 @@
+.outer-container {
+    display: flex;
+    flex-direction: column;
+
+    gap: 0.5rem;
+    padding-inline: 1rem;
+    width: auto;
+}
+
+.content-container {
+    display: flex;
+    flex-direction: column;
+    width: auto;
+
+    gap: 0.5rem;
+
+    justify-content: space-evenly;
+}
+
+.search {
+    max-width: 30rem;
+    height: 1rem;
+
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 6px;
+}
