@@ -66,7 +66,7 @@ export default function Graph(props) {
               bottom: 5
             }}>
             <CartesianGrid strokeDasharray="3 3" />
-            <XAxis dataKey = 'date' />
+            <XAxis stroke="#E1E1E1" dataKey = 'date' />
             <YAxis />
             <Tooltip />
             <Legend />
