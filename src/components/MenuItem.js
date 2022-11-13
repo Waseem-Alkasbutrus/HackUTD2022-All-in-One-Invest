@@ -3,7 +3,7 @@ import "./MenuItem.css"
 
 export function Item(props) {
     return (
-        <div className={props.className}>
+        <div onClick={props.clickFunc} className={props.active}>
             <img className="item-icon" src={props.icon} />
             <h1 className="item-label">{props.label}</h1>
         </div>
