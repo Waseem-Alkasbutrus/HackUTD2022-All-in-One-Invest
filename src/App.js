@@ -75,14 +75,14 @@ function App() {
 
       <div className={tabIndex === 2? '.content-div': 'hidden-content-div'}>
         <CardList>
-          {/* <ItemCard file={APPL} ticker={Stocks[0].ticker} name={Stocks[0].name} price={Stocks[0].price} change={Stocks[0].change}/>
+          <ItemCard file={APPL} ticker={Stocks[0].ticker} name={Stocks[0].name} price={Stocks[0].price} change={Stocks[0].change}/>
           <ItemCard file={AMZN} ticker={Stocks[1].ticker} name={Stocks[1].name} price={Stocks[1].price} change={Stocks[1].change}/>
           <ItemCard file={FXAIX} ticker={Stocks[2].ticker} name={Stocks[2].name} price={Stocks[2].price} change={Stocks[2].change}/>
           <ItemCard file={GOOGL} ticker={Stocks[3].ticker} name={Stocks[3].name} price={Stocks[3].price} change={Stocks[3].change}/>
           <ItemCard file={INTL} ticker={Stocks[4].ticker} name={Stocks[4].name} price={Stocks[4].price} change={Stocks[4].change}/>
           <ItemCard file={JEPI} ticker={Stocks[5].ticker} name={Stocks[5].name} price={Stocks[5].price} change={Stocks[5].change}/>
           <ItemCard file={JNJ} ticker={Stocks[6].ticker} name={Stocks[6].name} price={Stocks[6].price} change={Stocks[6].change}/>
-          <ItemCard file={JPST} ticker={Stocks[7].ticker} name={Stocks[7].name} price={Stocks[7].price} change={Stocks[7].change}/> */}
+          <ItemCard file={JPST} ticker={Stocks[7].ticker} name={Stocks[7].name} price={Stocks[7].price} change={Stocks[7].change}/>
           <ItemCard file={MA} ticker={Stocks[8].ticker} name={Stocks[8].name} price={Stocks[8].price} change={Stocks[8].change}/>
           <ItemCard file={META} ticker={Stocks[9].ticker} name={Stocks[9].name} price={Stocks[9].price} change={Stocks[9].change}/>
           <ItemCard file={MSFT} ticker={Stocks[10].ticker} name={Stocks[10].name} price={Stocks[10].price} change={Stocks[10].change}/>

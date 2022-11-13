@@ -79,14 +79,15 @@ export default function Graph(props) {
             />
 
             {/* SMA_100 */}
-            {/* <Line
+            <Line
               connectNulls
               type="monotone"
               dataKey="SMA"
               stroke="#0000ff"
               dot={false}
-            /> */}
+            />
             {/* EMA_100 */}
+            
             <Line
               connectNulls
               type="monotone"
@@ -97,7 +98,7 @@ export default function Graph(props) {
 
             {/* BBANDS */}
 
-            {/* <Line
+            <Line
               connectNulls
               type="line"
               dataKey="UpperBand"
@@ -110,7 +111,7 @@ export default function Graph(props) {
               dataKey="LowerBand"
               stroke="#918e8e"
               dot={false}
-            /> */}
+            />
 
           </LineChart>
         </div>
