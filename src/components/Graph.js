@@ -102,14 +102,14 @@ export default function Graph(props) {
               connectNulls
               type="line"
               dataKey="UpperBand"
-              stroke="#918e8e"
+              stroke="#E1E1E1"
               dot={false}
             />
             <Line
               connectNulls
               type="line"
               dataKey="LowerBand"
-              stroke="#918e8e"
+              stroke="#E1E1E1"
               dot={false}
             />
 
