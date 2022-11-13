@@ -11,13 +11,13 @@ import {
   Legend
 } from "recharts";
 
-import DatePicker from "react-datepicker";
 import "react-datepicker/dist/react-datepicker.css"
 
 function convertEpochToSpecificTimezone(timeEpoch, offset){
-  var d = new Date(timeEpoch);
-  var utc = d.getTime() + (d.getTimezoneOffset() * 60000);  //This converts to UTC 00:00
-  var nd = new Date(utc + (3600000*offset));
+  let d = new Date(timeEpoch);
+  let utc = d.getTime() + (d.getTimezoneOffset() * 60000);  //This converts to UTC 00:00
+  let nd = new Date(utc + (3600000*offset));
+  
   return nd.toLocaleString();
 }
 
@@ -51,10 +51,7 @@ export default function Graph(props) {
     console.log(props.companyFile)
     
     return (
-    <div className='App'>
-      <div className='Brother-man'>
-
-      </div>
+    <div className='container'>
       <header>
         <div>
           <LineChart

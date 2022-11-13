@@ -11,6 +11,14 @@
     padding: 0.2rem 1rem;
 }
 
+.graph {
+    width: auto;
+}
+
+.hide {
+    display: none;
+}
+
 .info {
     display: flex;
     flex-direction: row;
