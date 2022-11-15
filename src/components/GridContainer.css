@@ -1,25 +1,52 @@
 .outer-container {
     display: flex;
     flex-direction: column;
+    justify-content: stretch;
+
+    overflow: hidden;
 
     gap: 0.5rem;
     padding-inline: 1rem;
 }
 
-.content-container {
+.content {
+    margin-top: 4rem;
+    overflow-y: auto;
+
+    box-sizing: border-box;
+}
+
+.row {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
 
     gap: 0.5rem;
-
     justify-content: space-evenly;
 }
 
-.search {
-    max-width: 30rem;
-    height: 1rem;
+.col {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
 
-    border: 1px solid rgba(0, 0, 0, 0.2);
-    border-radius: 6px;
+    gap: 0.5rem;
+    justify-content: stretch;
+}
+
+.search {
+    position: fixed;
+
+    height: 3rem;
+    width: 100%;
+
+    padding-inline-start: 0.5rem;
+
+    font-size: 20px;
+
+    color: var(--color-white);
+    background-color: var(--color-Twhite);
+    
+    border: 0rem;
+    border-radius: 1rem;
 }
