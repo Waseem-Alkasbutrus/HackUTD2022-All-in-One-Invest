@@ -7,8 +7,9 @@ export default function GridContainer(props) {
 
     return (
         <div className="outer-container">
-            <input onChange={(event) => {setSearchTerm(event.target.value)}} className="search" type="text" placeholder={"Search for " + props.placeholder + "..."}></input>
+            
             <div className={"content " + props.flexStyle}>
+                <input onChange={(event) => {setSearchTerm(event.target.value)}} className="search" type="text" placeholder={"Search for " + props.placeholder + "..."}></input>
                 {props.children.filter((item) => item.props.searchKey.toLowerCase().includes(searchTerm.toLowerCase()))}
             </div>
         </div>
