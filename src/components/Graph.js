@@ -11,21 +11,6 @@ import {
   ResponsiveContainer,
 } from 'recharts'
 
-import 'react-datepicker/dist/react-datepicker.css'
-
-// function convertEpochToSpecificTimezone(timeEpoch, offset){
-//   let date = new Date(timeEpoch);
-//   let utc = date.
-//   console.log(d)
-//   console.log(utc)
-//   console.log(nd)
-
-//   let x = new Date(timeEpoch)
-//   console.log()
-
-//   return nd.toLocaleString();
-// }
-
 function dataGenerator(company) {
   let companyData = []
 
@@ -38,8 +23,8 @@ function dataGenerator(company) {
     let dailyCompanyData = {
       date:
         date.toLocaleString('en-US', { month: 'short' }) +
-        ',' +
-        date.getUTCFullYear(),
+        ' \'' +
+        date.toLocaleDateString('en', {year: '2-digit'}),
       unix: i,
       Close: company.Close[i],
       SMA: company.SMA_100[i],
@@ -59,7 +44,7 @@ export default function Graph(props) {
   console.log(props.companyFile)
 
   return (
-      <ResponsiveContainer debounce={0} width="100%" height={500}>
+      <ResponsiveContainer width="100%" height={600}>
         <LineChart
           // This is the variable to be changed
           data={dates}
@@ -71,7 +56,7 @@ export default function Graph(props) {
           }}
         >
           <CartesianGrid strokeDasharray="3 3" />
-          <XAxis stroke="#E1E1E1" dataKey="date" />
+          <XAxis minTickGap={16} stroke="#E1E1E1" dataKey="date" />
           <YAxis />
           <Tooltip />
           <Legend />
