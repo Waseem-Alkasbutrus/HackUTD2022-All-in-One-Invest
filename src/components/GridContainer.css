@@ -10,7 +10,7 @@
 }
 
 .content {
-    margin-top: 4rem;
+    padding-top: 4rem;
     overflow-y: auto;
 
     box-sizing: border-box;
@@ -38,7 +38,7 @@
     position: fixed;
 
     height: 3rem;
-    width: 100%;
+    width: 81.8vw;
 
     padding-inline-start: 0.5rem;
 
@@ -46,6 +46,7 @@
 
     color: var(--color-white);
     background-color: var(--color-Twhite);
+    backdrop-filter: blur(10px);
     
     border: 0rem;
     border-radius: 1rem;
