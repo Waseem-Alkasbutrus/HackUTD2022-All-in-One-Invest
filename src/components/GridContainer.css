@@ -6,13 +6,13 @@
     overflow: hidden;
 
     gap: 0.5rem;
-    padding-inline: 1rem;
 }
 
 .content {
     padding-top: 4rem;
     overflow-y: auto;
 
+    padding-inline: 1rem;
     box-sizing: border-box;
 }
 
@@ -37,8 +37,11 @@
 .search {
     position: fixed;
 
+    top: 0.5rem;
+    right: 2rem;
+
     height: 3rem;
-    width: 81.8vw;
+    width: 83vw;
 
     padding-inline-start: 0.5rem;
 
