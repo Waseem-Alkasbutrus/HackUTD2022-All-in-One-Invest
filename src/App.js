@@ -41,6 +41,7 @@ import BurgerIcon from './assets/icons/Burger.svg'
 
 import ItemCard from './components/ItemCard'
 import Stocks from './Stocks.json'
+import SurveyQuestion from './components/SurveyQuestion'
 
 function App() {
   const [tabIndex, setTabIndex] = useState(1)
@@ -131,7 +132,13 @@ function App() {
       </div>
 
       <div className={tabIndex === 3 ? 'content-div' : 'hidden'}>
-        <p>
+        <GridContainer noSearch={true} flexStyle="col" placeholder="Your mom">
+            <SurveyQuestion question="How comfortable are you with risk?" leftLabel="Not Comfortable" rightLabel="Very Comfortable"/>
+            <SurveyQuestion question="How long do you wish to keep your money in the market?" leftLabel="Not Long" rightLabel="Very Long"/>
+            <SurveyQuestion question="How involved are you in checking trends?" leftLabel="Not Involved" rightLabel="Very Involved"/>
+        </GridContainer>
+        
+        {/* <p>
           There are 3 main categories to divide people based on the survey
           results.
         </p>
@@ -146,7 +153,7 @@ function App() {
         </p>
         <p>NVDA, INTC, AMZN, JNJ, PFE, V, BAC</p>
         <p>High Risk/High Reward/Low Research: Active ETFS, Mutual Funds</p>
-        <p>VSMPX, VFIAX, FXAIX, JPST, JEPI</p>
+        <p>VSMPX, VFIAX, FXAIX, JPST, JEPI</p> */}
       </div>
     </div>
   )
