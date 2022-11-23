@@ -21,7 +21,36 @@
 
   padding: 1rem;
 
-  min-width: 15rem;
+  min-width: 16rem;
+}
+
+.menuItemContainer {
+  display: flex;
+  flex-direction: column;
+  
+  gap: 0.3rem;
+}
+
+.menu-img {
+  width: 3rem;
+}
+
+.separator {
+  border-bottom: 1px solid var(--color-Twhite);
+}
+
+.collapsed-menu-div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+
+  border: 1px solid  var(--color-Twhite);;
+  border-radius: 16px;
+
+  padding: 1rem;
+
+  width: fit-content; 
 }
 
 .content-div {
@@ -31,7 +60,7 @@
   width: 100%;
 }
 
-.hidden-content-div {
+.hidden {
   display: none;
 }
 

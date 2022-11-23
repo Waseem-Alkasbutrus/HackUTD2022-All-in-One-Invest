@@ -5,7 +5,7 @@ export function Item(props) {
     return (
         <div onClick={props.clickFunc} className={props.active}>
             <img alt="item icon" className="item-icon" src={props.icon} />
-            <h1 className="item-label">{props.label}</h1>
+            <h1 className={props.collapsed === 1? "item-label" : "hidden"}>{props.label}</h1>
         </div>
     )
 }

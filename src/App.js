@@ -1,11 +1,11 @@
-import './App.css';
+import './App.css'
 
-import Definition from './components/Definition';
-import GridContainer from './components/GridContainer';
-import { useState } from 'react';
-import {Item} from './components/MenuItem'
+import Definition from './components/Definition'
+import GridContainer from './components/GridContainer'
+import { useState } from 'react'
+import { Item } from './components/MenuItem'
 
-import APPL from'./json/APPL.json'
+import APPL from './json/APPL.json'
 import AMZN from './json/AMZN.json'
 import FXAIX from './json/FXAIX.json'
 import GOOGL from './json/GOOGL.json'
@@ -36,26 +36,58 @@ import LearnIcon from './assets/icons/Learn.svg'
 import StocksIcon from './assets/icons/Stocks.svg'
 // import CryptoIcon from './assets/icons/Crypto.svg'
 import SuggestionsIcon from './assets/icons/Suggestions.svg'
-import ItemCard from './components/ItemCard';
+import BackIcon from './assets/icons/Back.svg'
+import BurgerIcon from './assets/icons/Burger.svg'
 
+import ItemCard from './components/ItemCard'
 import Stocks from './Stocks.json'
 
 function App() {
   const [tabIndex, setTabIndex] = useState(1)
+  const [menuState, setMenuState] = useState(1)
 
   return (
-    <div className='app-div'>
-      <div className="menu-div">
-          <div>
-            <Item clickFunc={() => setTabIndex(1)} active={tabIndex === 1? "tab active-tab": "tab"} icon={LearnIcon} label="Education" />
-            <Item clickFunc={() => setTabIndex(2)} active={tabIndex === 2? "tab active-tab": "tab"} icon={StocksIcon} label="Stocks" />
-          </div>
-          <Item clickFunc={() => setTabIndex(3)} active={tabIndex === 3? "tab active-tab": "tab"} icon={SuggestionsIcon} label="Get Suggestions" />
+    <div className="app-div">
+      <div className={menuState === 1 ? 'menu-div' : 'collapsed-menu-div'}>
+        <div className="menuItemContainer">
+          <img
+            onClick={() => {
+              setMenuState(menuState * -1)
+            }}
+            alt="item icon"
+            className='menu-img'
+            src={menuState === 1 ? BackIcon : BurgerIcon}
+          />
+
+          <div className="separator"></div>
+
+          <Item
+            clickFunc={() => setTabIndex(1)}
+            active={tabIndex === 1 ? 'tab active-tab' : 'tab'}
+            icon={LearnIcon}
+            collapsed={menuState}
+            label="Education"
+          />
+          <Item
+            clickFunc={() => setTabIndex(2)}
+            active={tabIndex === 2 ? 'tab active-tab' : 'tab'}
+            icon={StocksIcon}
+            collapsed={menuState}
+            label="Stocks"
+          />
+        </div>
+        <Item
+          clickFunc={() => setTabIndex(3)}
+          active={tabIndex === 3 ? 'tab active-tab' : 'tab'}
+          icon={SuggestionsIcon}
+          collapsed={menuState}
+          label="Get Suggestions"
+        />
       </div>
 
-      <div className={tabIndex === 1? 'content-div': 'hidden-content-div'}>
-        <GridContainer flexStyle="row" placeholder="definitions" >
-          <Definition searchKey="Open" term="Open" definition="The opening price is the price at which a security first trades upon the opening of an exchange on a trading day." />
+      <div className={tabIndex === 1 ? 'content-div' : 'hidden'}>
+        <GridContainer flexStyle="row" placeholder="definitions">
+        <Definition searchKey="Open" term="Open" definition="The opening price is the price at which a security first trades upon the opening of an exchange on a trading day." />
           <Definition searchKey="Close" term="Close" definition="The closing price is the raw price or cash value of the last transacted price in a security before the market officially closes for normal trading." />
           <Definition searchKey="High" term="High" definition="The highest intraday price of a stock in the most recent (or current) trading session." />
           <Definition searchKey="Low" term="Low" definition="The lowest intraday price of a stock in the most recent (or current) trading session." />
@@ -74,9 +106,9 @@ function App() {
         </GridContainer>
       </div>
 
-      <div className={tabIndex === 2? 'content-div': 'hidden-content-div'}>
+      <div className={tabIndex === 2 ? 'content-div' : 'hidden'}>
         <GridContainer flexStyle="col" placeholder="company names and tickers">
-          <ItemCard searchKey={Stocks[0].ticker} file={APPL} ticker={Stocks[0].ticker} name={Stocks[0].name} price={Stocks[0].price} change={Stocks[0].change}/>
+        <ItemCard searchKey={Stocks[0].ticker} file={APPL} ticker={Stocks[0].ticker} name={Stocks[0].name} price={Stocks[0].price} change={Stocks[0].change}/>
           <ItemCard searchKey={Stocks[1].ticker} file={AMZN} ticker={Stocks[1].ticker} name={Stocks[1].name} price={Stocks[1].price} change={Stocks[1].change}/>
           <ItemCard searchKey={Stocks[2].ticker} file={FXAIX} ticker={Stocks[2].ticker} name={Stocks[2].name} price={Stocks[2].price} change={Stocks[2].change}/>
           <ItemCard searchKey={Stocks[3].ticker} file={GOOGL} ticker={Stocks[3].ticker} name={Stocks[3].name} price={Stocks[3].price} change={Stocks[3].change}/>
@@ -98,17 +130,26 @@ function App() {
         </GridContainer>
       </div>
 
-      <div className={tabIndex === 3? 'content-div': 'hidden-content-div'}>
-        <p>There are 3 main categories to divide people based on the survey results.</p>
-        <p>Low Risk/Low Reward/Low Research: Passive ETFS, Tech Stock (Large Market Cap)</p>
+      <div className={tabIndex === 3 ? 'content-div' : 'hidden'}>
+        <p>
+          There are 3 main categories to divide people based on the survey
+          results.
+        </p>
+        <p>
+          Low Risk/Low Reward/Low Research: Passive ETFS, Tech Stock (Large
+          Market Cap)
+        </p>
         <p>VOO, QQQ, APPL, MSFT</p>
-        <p>High Risk/High Reward/High Research: Semiconductor, Internet Retail, Drug Manufacturing, Banks</p>
+        <p>
+          High Risk/High Reward/High Research: Semiconductor, Internet Retail,
+          Drug Manufacturing, Banks
+        </p>
         <p>NVDA, INTC, AMZN, JNJ, PFE, V, BAC</p>
         <p>High Risk/High Reward/Low Research: Active ETFS, Mutual Funds</p>
         <p>VSMPX, VFIAX, FXAIX, JPST, JEPI</p>
       </div>
     </div>
-  );
+  )
 }
 
-export default App;
+export default App

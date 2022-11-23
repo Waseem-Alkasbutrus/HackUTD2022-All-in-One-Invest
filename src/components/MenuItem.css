@@ -7,7 +7,7 @@
     gap: 0.5rem;
     
     width: auto;
-    padding: 0.5rem;
+    padding: 0.6rem;
 }
 
 .active-tab {
@@ -17,13 +17,13 @@
     border-radius: 1rem;
 }
 
-img {
-    filter: invert(100%);
-}
-
 .item-icon {
     height: 32px;
     width: 32px;
+}
+
+.hidden {
+    display: none;
 }
 
 .item-label {
