@@ -8,8 +8,6 @@ export default function ItemCard(props) {
     const [graphVisibility, setGraphVisibility] = useState(-1)
     const [graph, setGraph] = useState(0)
 
-
-
     return (
         <div className={graphVisibility === 1? "card-div active" : "card-div"} onClick={() => setGraphVisibility(graphVisibility * -1)}>
             <div className="info" onClick={() => {setGraph(<Graph companyFile={props.file} />)}}>

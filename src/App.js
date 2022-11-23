@@ -63,14 +63,14 @@ function App() {
 
           <Item
             clickFunc={() => setTabIndex(1)}
-            active={tabIndex === 1 ? 'tab active-tab' : 'tab'}
+            active={tabIndex === 1 ? 'tab active-tab' : 'tab inactive-tab'}
             icon={LearnIcon}
             collapsed={menuState}
             label="Education"
           />
           <Item
             clickFunc={() => setTabIndex(2)}
-            active={tabIndex === 2 ? 'tab active-tab' : 'tab'}
+            active={tabIndex === 2 ? 'tab active-tab' : 'tab  inactive-tab'}
             icon={StocksIcon}
             collapsed={menuState}
             label="Stocks"
@@ -78,7 +78,7 @@ function App() {
         </div>
         <Item
           clickFunc={() => setTabIndex(3)}
-          active={tabIndex === 3 ? 'tab active-tab' : 'tab'}
+          active={tabIndex === 3 ? 'tab active-tab' : 'tab  inactive-tab'}
           icon={SuggestionsIcon}
           collapsed={menuState}
           label="Get Suggestions"
