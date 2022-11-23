@@ -10,7 +10,7 @@ html {
 }
 
 body {
-  background-color: var(--color-black);
+  background-image: linear-gradient(to right, #16141A, #241832, #180A2B);
   color: var(--color-white);
  
   margin: 0;
