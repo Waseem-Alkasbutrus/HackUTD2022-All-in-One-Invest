@@ -86,8 +86,8 @@ function App() {
       </div>
 
       <div className={tabIndex === 1 ? 'content-div' : 'hidden'}>
-        <GridContainer flexStyle="row" placeholder="definitions">
-        <Definition searchKey="Open" term="Open" definition="The opening price is the price at which a security first trades upon the opening of an exchange on a trading day." />
+        <GridContainer flexStyle="column" placeholder="definitions">
+          <Definition searchKey="Open" term="Open" definition="The opening price is the price at which a security first trades upon the opening of an exchange on a trading day." />
           <Definition searchKey="Close" term="Close" definition="The closing price is the raw price or cash value of the last transacted price in a security before the market officially closes for normal trading." />
           <Definition searchKey="High" term="High" definition="The highest intraday price of a stock in the most recent (or current) trading session." />
           <Definition searchKey="Low" term="Low" definition="The lowest intraday price of a stock in the most recent (or current) trading session." />
@@ -108,7 +108,7 @@ function App() {
 
       <div className={tabIndex === 2 ? 'content-div' : 'hidden'}>
         <GridContainer flexStyle="col" placeholder="company names and tickers">
-        <ItemCard searchKey={Stocks[0].ticker} file={APPL} ticker={Stocks[0].ticker} name={Stocks[0].name} price={Stocks[0].price} change={Stocks[0].change}/>
+          <ItemCard searchKey={Stocks[0].ticker} file={APPL} ticker={Stocks[0].ticker} name={Stocks[0].name} price={Stocks[0].price} change={Stocks[0].change}/>
           <ItemCard searchKey={Stocks[1].ticker} file={AMZN} ticker={Stocks[1].ticker} name={Stocks[1].name} price={Stocks[1].price} change={Stocks[1].change}/>
           <ItemCard searchKey={Stocks[2].ticker} file={FXAIX} ticker={Stocks[2].ticker} name={Stocks[2].name} price={Stocks[2].price} change={Stocks[2].change}/>
           <ItemCard searchKey={Stocks[3].ticker} file={GOOGL} ticker={Stocks[3].ticker} name={Stocks[3].name} price={Stocks[3].price} change={Stocks[3].change}/>
