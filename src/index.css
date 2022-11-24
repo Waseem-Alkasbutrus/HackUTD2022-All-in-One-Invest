@@ -29,3 +29,16 @@ code {
 ::placeholder {
   color: var(--color-Twhite);
 }
+
+::-webkit-scrollbar {
+  width: 0.5rem;               /* width of the entire scrollbar */
+}
+
+::-webkit-scrollbar-track {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: var(--color-Twhite);    /* color of the scroll thumb */
+  border-radius: 20px;       /* roundness of the scroll thumb */
+}
