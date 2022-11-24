@@ -1,18 +1,14 @@
 .definition-card {
     display: flex;
     flex-direction: column;
-    justify-content: top;
-    align-items: start;
 
-    width: 16rem;
-    height: fit-content; 
+    width: 21rem; 
     padding: 2rem 1rem;
-    
-    text-overflow: ellipsis;
-    overflow: hidden;
     
     border: 1px solid  rgba(255,255,255,0.2);
     border-radius: 16px;
+
+    transition: all ease-in-out 0.1s;
 }
 
 .definition-term {
@@ -23,14 +19,36 @@
 }
 
 .definition-def {
-    text-overflow: ellipsis;
+    margin: 0;
+}
 
-    height: 2.3rem;
+.inactive>.definition-def {
+    width: 20rem;
+    height: 6rem;
+
     text-overflow: ellipsis;
     overflow: hidden;
-    
+
     font-size: 16px;
     font-weight: 250;
+}
 
-    margin: 0;
+.inactive:hover {
+    background-color: var(--color-Tpurple);
+}
+
+.activated {
+    border: 2px solid var(--color-purple);
+    background-color: var(--color-Tpurple);
+    backdrop-filter: blur(10px);
+
+    transform: scale(1.2);
+    gap: 1rem;
+}
+
+.activated>.definition-def {
+    height: fit-content;
+
+    font-size: 18px;
+    font-weight: 350;
 }

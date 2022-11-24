@@ -1,0 +1,19 @@
+.outer-container {
+    display: flex;
+    flex-direction: column;
+    overflow-y: scroll;
+
+    padding-inline: 1rem;
+    gap: 0.5rem;
+
+    min-height: auto;
+}
+
+.def-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    gap: 0.5rem;
+}

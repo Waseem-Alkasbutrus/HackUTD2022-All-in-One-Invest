@@ -2,8 +2,13 @@ import './App.css'
 
 import Definition from './components/Definition'
 import GridContainer from './components/GridContainer'
+import DefinitionContainer from './components/DefinitionContainer'
 import { useState } from 'react'
 import { Item } from './components/MenuItem'
+import ItemCard from './components/ItemCard'
+import Stocks from './Stocks.json'
+import SurveyQuestion from './components/SurveyQuestion'
+
 
 import APPL from './json/APPL.json'
 import AMZN from './json/AMZN.json'
@@ -38,10 +43,6 @@ import StocksIcon from './assets/icons/Stocks.svg'
 import SuggestionsIcon from './assets/icons/Suggestions.svg'
 import BackIcon from './assets/icons/Back.svg'
 import BurgerIcon from './assets/icons/Burger.svg'
-
-import ItemCard from './components/ItemCard'
-import Stocks from './Stocks.json'
-import SurveyQuestion from './components/SurveyQuestion'
 
 function App() {
   const [tabIndex, setTabIndex] = useState(1)
@@ -87,7 +88,7 @@ function App() {
       </div>
 
       <div className={tabIndex === 1 ? 'content-div' : 'hidden'}>
-        <GridContainer flexStyle="column" placeholder="definitions">
+        <DefinitionContainer flexStyle="row" placeholder="definitions">
           <Definition searchKey="Open" term="Open" definition="The opening price is the price at which a security first trades upon the opening of an exchange on a trading day." />
           <Definition searchKey="Close" term="Close" definition="The closing price is the raw price or cash value of the last transacted price in a security before the market officially closes for normal trading." />
           <Definition searchKey="High" term="High" definition="The highest intraday price of a stock in the most recent (or current) trading session." />
@@ -104,7 +105,7 @@ function App() {
           <Definition searchKey="Simple Moving Average (SMA)" term="Simple Moving Average (SMA)" definition="Simple moving averages calculate the average of a range of prices by the number of periods within that range. It is a technical indicator that can aid in determining if an asset price will continue or if it will reverse a bull or bear trend." />
           <Definition searchKey="Exponential Moving Average (EMA)" term="Exponential Moving Average (EMA)" definition="Exponential moving averages (EMAs) are designed to see price trends over specific time frames, such as 50 or 100 days. Compared to simple moving averages, EMAs give greater weight to recent (more relevant) data." />
           <Definition searchKey="Bollinger Bands" term="Bollinger Bands" definition="Bollinger BandsÂ® are a technical analysis tool developed by John Bollinger for generating oversold or overbought signals. The upper and lower bands are typically 2 standard deviations +/- from a 20-day simple moving average (which is the center line), but they can be modified. When the price continually touches the upper Bollinger Band, it can indicate an overbought signal while continually touching the lower band indicates an oversold signal." />
-        </GridContainer>
+        </DefinitionContainer>
       </div>
 
       <div className={tabIndex === 2 ? 'content-div' : 'hidden'}>
