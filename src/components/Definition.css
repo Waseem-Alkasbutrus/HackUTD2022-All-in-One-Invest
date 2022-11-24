@@ -11,6 +11,10 @@
     transition: all ease-in-out 0.1s;
 }
 
+.definition-card:hover {
+    cursor: pointer;
+}
+
 .definition-term {
     font-size: 24px;
     font-weight: 400;
