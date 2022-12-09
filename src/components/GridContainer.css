@@ -16,15 +16,6 @@
     box-sizing: border-box;
 }
 
-.row {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-
-    gap: 0.5rem;
-    align-items: flex-start;
-}
-
 .col {
     display: flex;
     flex-direction: column;
@@ -40,7 +31,6 @@
     padding: 1rem;
     top: 0.1rem;
 
-    
     color: var(--color-white);
     background-color: var(--color-Twhite);
     backdrop-filter: blur(10px);
