@@ -14,7 +14,7 @@ All-in-One Invest is a project to help new investors get started. Search for sto
 ### Try It Yourself
 Clone this repository to your computer
 ```bash
-git clone https://github.com/Waseem-Alkasbutrus/HackUTD2022-Remastered.git
+git clone https://github.com/Waseem-Alkasbutrus/HackUTD2022-All-in-One-Invest.git
 ```
 
 Dwnload dependencies and start local server
